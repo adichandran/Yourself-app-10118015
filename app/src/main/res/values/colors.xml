@@ -9,5 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#666666</color>
 
-    <color name="background">#FEFEFE</color>
+    <color name="background">#6200EE</color>
+    <color name="purple">#511281</color>
+    <color name="colorPrimary">#98ddca</color>
+    <color name="colorPrimaryDark">#d5ecc2</color>
+    <color name="colorAccent">#ffd3b4</color>
+    <color name="colorpink">#ffaaa7</color>
 </resources>

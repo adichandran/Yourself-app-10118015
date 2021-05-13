@@ -1,5 +1,13 @@
 package com.adichandra.yourselfapp;
 
+/*
+ * NIM   : 10118015
+ * NAMA  : Adi Chandra Nugraha
+ * KELAS : IF1
+ * TGL   : 12/05/2021
+ * Deskripsi : Membuat Tampilan MainActivity menjadi Splash Layout
+ * */
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
