@@ -38,53 +38,45 @@
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/black"
-        android:layout_marginEnd="24dp"
-        android:text="Skip"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="279dp"
         android:layout_height="209dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="130dp"
         android:src="@drawable/w4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:text="Mari kita lihat semua\ntentang Adi"
+        android:layout_marginTop="28dp"
+        android:text="Mari kita mengenal\nlebih jauh sosok\nAdi Chandra"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="133dp"
+        android:id="@+id/buttonGo"
+        android:layout_width="280dp"
         android:layout_height="46dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/btn_go"
+        android:gravity="center"
         android:text="Lets Go"
+        android:textAllCaps="false"
+        android:textColor="@color/denim"
+        android:textSize="18sp"
+        android:onClick="btnGo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

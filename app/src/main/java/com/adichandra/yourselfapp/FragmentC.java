@@ -21,6 +21,7 @@ import android.view.ViewGroup;
  * Use the {@link FragmentC#newInstance} factory method to
  * create an instance of this fragment.
  */
+
 public class FragmentC extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -68,5 +69,6 @@ public class FragmentC extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_c, container, false);
+
     }
 }
