@@ -13,6 +13,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.adichandra.yourselfapp.fragment.onboarding.FragmentA;
+import com.adichandra.yourselfapp.fragment.onboarding.FragmentB;
+import com.adichandra.yourselfapp.fragment.onboarding.FragmentC;
+
 import org.jetbrains.annotations.NotNull;
 
 public class ViewPager extends FragmentPagerAdapter {

@@ -1,4 +1,4 @@
-package com.adichandra.yourselfapp;
+package com.adichandra.yourselfapp.fragment.onboarding;
 
 /*
  * NIM   : 10118015
@@ -15,6 +15,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.adichandra.yourselfapp.R;
 
 /**
  * A simple {@link Fragment} subclass.

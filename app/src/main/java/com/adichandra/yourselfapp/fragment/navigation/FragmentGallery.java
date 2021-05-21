@@ -1,11 +1,11 @@
-package com.adichandra.yourselfapp;
+package com.adichandra.yourselfapp.fragment.navigation;
 
 /*
  * NIM   : 10118015
  * NAMA  : Adi Chandra Nugraha
  * KELAS : IF1
  * TGL   : 12/05/2021
- * Deskripsi : Membuat Tampilan FragmentB
+ * Deskripsi : Membuat Tampilan FragmentGallery
  * */
 
 import android.os.Bundle;
@@ -16,12 +16,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.adichandra.yourselfapp.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FragmentB#newInstance} factory method to
+ * Use the {@link FragmentGallery#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentB extends Fragment {
+public class FragmentGallery extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,7 +34,7 @@ public class FragmentB extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FragmentB() {
+    public FragmentGallery() {
         // Required empty public constructor
     }
 
@@ -42,11 +44,11 @@ public class FragmentB extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentB.
+     * @return A new instance of fragment FragmentGallery.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragmentB newInstance(String param1, String param2) {
-        FragmentB fragment = new FragmentB();
+    public static FragmentGallery newInstance(String param1, String param2) {
+        FragmentGallery fragment = new FragmentGallery();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,6 +69,6 @@ public class FragmentB extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_b, container, false);
+        return inflater.inflate(R.layout.fragment_gallery, container, false);
     }
 }
