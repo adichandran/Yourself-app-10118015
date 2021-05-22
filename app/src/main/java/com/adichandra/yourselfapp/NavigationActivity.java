@@ -41,6 +41,7 @@ public class NavigationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
+
         drawerLayout = findViewById(R.id.drawer);
         toolbar = findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
@@ -78,8 +79,7 @@ public class NavigationActivity extends AppCompatActivity {
                         loadFragment(fragment);
                         break;
                     default:
-                        fragment = new FragmentHome();
-                        loadFragment(fragment);
+                        fragment = null;
                         break;
                 }
                 return true;
@@ -89,7 +89,7 @@ public class NavigationActivity extends AppCompatActivity {
 
     private void loadFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
         if (fragment == null) {
             fragmentTransaction.add(R.id.frame, new FragmentHome());
             fragmentTransaction.commit();

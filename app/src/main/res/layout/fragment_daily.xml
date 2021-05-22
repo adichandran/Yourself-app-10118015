@@ -3,14 +3,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.navigation.FragmentDaily">
+    tools:context=".fragment.navigation.FragmentDaily"
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Fragment Daily"
-        android:textSize="48sp"
-        android:background="@color/colorAccent"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <RelativeLayout
+            android:id="@+id/rel_daily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dailyact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="36sp"
+                android:text="Daily Activity"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/descDaily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_below="@id/dailyact"
+                android:text="Kegiatan Sehari-Hari Seorang \nAdi chandra"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/daily_act"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="14dp"
+                android:layout_below="@id/descDaily">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_friend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:id="@+id/friendact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="36sp"
+                android:text="Friend List"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/descFriend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_below="@id/friendact"
+                android:text="Beberapa Teman Adi Chandra\n(Tidak Semuanya)"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/friend_act"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="14dp"
+                android:layout_below="@id/descFriend">
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
 
 </FrameLayout>

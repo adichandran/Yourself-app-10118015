@@ -18,7 +18,8 @@
             android:layout_height="60dp"
             app:popupTheme="@style/AppTheme.popUpOverlay"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:navigationIcon="@drawable/order">
+            app:navigationIcon="@drawable/order"
+            app:buttonGravity="center_vertical">
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
