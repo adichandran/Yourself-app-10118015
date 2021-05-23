@@ -10,11 +10,15 @@ package com.adichandra.yourselfapp.fragment.navigation;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import com.adichandra.yourselfapp.R;
 
@@ -69,6 +73,20 @@ public class FragmentMusic extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_music, container, false);
+        final View view = inflater.inflate(R.layout.fragment_music, container, false);
+
+        VideoView videoView = view.findViewById(R.id.video);
+        videoView.setVideoPath("android.resource://"+getActivity().getPackageName()+"/"+R.raw.sample);
+        MediaController mediaController = new MediaController(getContext());
+        mediaController.setAnchorView(videoView);
+        videoView.setMediaController(mediaController);
+
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        getActivity().setTitle("Music and Video");
     }
 }

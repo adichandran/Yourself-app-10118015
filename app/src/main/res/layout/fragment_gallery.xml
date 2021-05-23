@@ -5,13 +5,43 @@
     android:layout_height="match_parent"
     tools:context=".fragment.navigation.FragmentGallery">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Fragment Gallery"
-        android:textSize="48sp"
-        android:textColor="@color/white"
-        android:background="@color/denim"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:id="@+id/gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textSize="36sp"
+            android:text="Gallery"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/descgall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="Kumpulan Foto-Foto Yang Disukai \nAdi chandra"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/gall_act"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+
 
 </FrameLayout>

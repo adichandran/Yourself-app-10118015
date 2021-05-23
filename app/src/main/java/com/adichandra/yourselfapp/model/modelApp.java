@@ -14,13 +14,7 @@ public class modelApp {
     private String[] friendAct;
     private int[] imgDaily;
     private int[] imgFriend;
-
-    public modelApp() {
-        this.dailyAct = dailyAct;
-        this.friendAct = friendAct;
-        this.imgDaily = imgDaily;
-        this.imgFriend = imgFriend;
-    }
+    int[] imgGallery;
 
     public String[] getFriendAct() {
         return friendAct;
@@ -52,5 +46,13 @@ public class modelApp {
 
     public void setImgDaily(int[] imgDaily) {
         this.imgDaily = imgDaily;
+    }
+
+    public int[] getImgGallery() {
+        return imgGallery;
+    }
+
+    public void setImgGallery(int[] imgGallery) {
+        this.imgGallery = imgGallery;
     }
 }

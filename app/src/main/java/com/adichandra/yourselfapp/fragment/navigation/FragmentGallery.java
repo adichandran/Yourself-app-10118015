@@ -10,13 +10,20 @@ package com.adichandra.yourselfapp.fragment.navigation;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.adichandra.yourselfapp.R;
+import com.adichandra.yourselfapp.adapter.AdapterGalleryAct;
+import com.adichandra.yourselfapp.model.modelApp;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -69,6 +76,40 @@ public class FragmentGallery extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallery, container, false);
+        final View view = inflater.inflate(R.layout.fragment_gallery, container, false);
+
+        final FragmentActivity fragment = getActivity();
+        final RecyclerView recyclerView = view.findViewById(R.id.gall_act);
+        recyclerView.setLayoutManager(new GridLayoutManager(fragment, 2));
+        modelApp model = new modelApp();
+
+        //gallery
+        int[] imgGallery = {
+                R.drawable.fr5, R.drawable.fr2, R.drawable.fr3, R.drawable.fr4,
+                R.drawable.fr1
+        };
+        model.setImgGallery(imgGallery);
+
+        //
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                final AdapterGalleryAct adapter = new AdapterGalleryAct(fragment, model.getImgGallery());
+                fragment.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        recyclerView.setAdapter(adapter);
+                    }
+
+                });
+            }
+        }).start();
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        getActivity().setTitle("Gallery");
     }
 }
