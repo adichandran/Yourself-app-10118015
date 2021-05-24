@@ -3,15 +3,147 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.navigation.FragmentProfile">
+    tools:context=".fragment.navigation.FragmentProfile"
+    android:background="@color/purple">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Fragment Profile"
-        android:textColor="@color/white"
-        android:textSize="48sp"
-        android:background="@color/purple"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/firstlayer">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilehome"
+                    android:layout_width="@dimen/dimen150"
+                    android:layout_height="@dimen/dimen150"
+                    android:layout_marginTop="@dimen/dimen80"
+                    android:layout_marginBottom="@dimen/dimen30"
+                    android:src="@drawable/profile"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/secondlayer">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen40"
+                android:layout_marginTop="@dimen/dimen20"
+                android:layout_marginBottom="@dimen/dimen32">
+
+                <TextView
+                    android:id="@+id/satu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perkenalkan Saya"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/dimensp18" />
+
+                <TextView
+                    android:id="@+id/dua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adi Chandra N."
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat"
+                    android:layout_marginLeft="@dimen/dimen4"
+                    android:textSize="@dimen/dimensp18"
+                    android:layout_toRightOf="@id/satu"/>
+
+                <TextView
+                    android:id="@+id/tiga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saya Lahir di"
+                    android:layout_below="@id/satu"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/dimensp18" />
+
+                <TextView
+                    android:id="@+id/empat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/dimen4"
+                    android:text="Bandung, 19 September"
+                    android:layout_below="@id/satu"
+                    android:layout_toRightOf="@id/tiga"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/dimensp18" />
+
+                <TextView
+                    android:id="@+id/lima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="2000. "
+                    android:layout_below="@id/empat"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/dimensp18" />
+
+                <TextView
+                    android:id="@+id/enam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saya anak"
+                    android:layout_below="@id/empat"
+                    android:layout_toRightOf="@id/lima"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/dimensp18" />
+
+                <TextView
+                    android:id="@+id/tujuh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/dimen4"
+                    android:text="Pertama"
+                    android:layout_below="@id/empat"
+                    android:layout_toRightOf="@id/enam"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/dimensp18" />
+
+                <TextView
+                    android:id="@+id/delapan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen4"
+                    android:text="Dari dua"
+                    android:layout_below="@id/empat"
+                    android:layout_toRightOf="@id/tujuh"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/dimensp18" />
+
+                <TextView
+                    android:id="@+id/sembilan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="bersaudara."
+                    android:layout_below="@id/tujuh"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/dimensp18" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

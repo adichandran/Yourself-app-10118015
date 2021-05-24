@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="220dp"
+    android:layout_height="@dimen/dimen220"
     android:background="@color/denim"
-    android:paddingTop="16dp"
-    android:paddingRight="16dp"
-    android:paddingLeft="16dp"
+    android:paddingTop="@dimen/dimen16"
+    android:paddingRight="@dimen/dimen16"
+    android:paddingLeft="@dimen/dimen16"
     android:layout_marginBottom="-40dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageHeader"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
+        android:layout_width="@dimen/dimen60"
+        android:layout_height="@dimen/dimen60"
+        android:layout_marginTop="@dimen/dimen60"
+        android:layout_marginLeft="@dimen/dimen10"
         android:src="@mipmap/ic_launcher"
         android:layout_centerVertical="true"/>
 
@@ -23,7 +23,7 @@
         android:orientation="vertical"
         android:layout_toRightOf="@id/imageHeader"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp">
+        android:layout_marginLeft="@dimen/dimen20">
 
         <TextView
             android:id="@+id/nameHeader"
@@ -32,7 +32,7 @@
             android:fontFamily="@font/montserrat"
             android:text="@string/app_name"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="@dimen/dimen20"
             android:textStyle="bold"/>
 
         <TextView
@@ -41,8 +41,8 @@
             android:text="10118015"
             android:textColor="@color/white"
             android:fontFamily="@font/montserrat"
-            android:textSize="18sp"
-            android:paddingTop="5dp"/>
+            android:textSize="@dimen/dimensp18"
+            android:paddingTop="@dimen/dimen5"/>
     </LinearLayout>
 
 

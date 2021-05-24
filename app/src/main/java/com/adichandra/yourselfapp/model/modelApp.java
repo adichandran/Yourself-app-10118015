@@ -14,7 +14,8 @@ public class modelApp {
     private String[] friendAct;
     private int[] imgDaily;
     private int[] imgFriend;
-    int[] imgGallery;
+    private int[] imgGallery;
+    private String[] musicAct;
 
     public String[] getFriendAct() {
         return friendAct;
@@ -54,5 +55,13 @@ public class modelApp {
 
     public void setImgGallery(int[] imgGallery) {
         this.imgGallery = imgGallery;
+    }
+
+    public String[] getMusicAct() {
+        return musicAct;
+    }
+
+    public void setMusicAct(String[] musicAct) {
+        this.musicAct = musicAct;
     }
 }

@@ -1,130 +1,410 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.navigation.FragmentHome"
-    android:background="@color/colorAccent">
+    tools:context=".fragment.navigation.FragmentHome">
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profilehome"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="80dp"
-        android:src="@drawable/profile"
-        app:civ_border_width="8dp"
-        app:civ_border_color="@color/colorpink"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:orientation="vertical"
-        android:background="@color/shrine_pink_300"
-        app:layout_constraintTop_toBottomOf="@+id/profilehome">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/satu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Perkenalkan Saya"
-            android:fontFamily="@font/montserrat"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/dua"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Adi Chandra Nugraha."
-            android:textStyle="bold"
-            android:fontFamily="@font/montserrat"
-            android:layout_marginLeft="4dp"
-            android:textSize="18sp"
-            android:layout_toRightOf="@id/satu"/>
-
-        <TextView
-            android:id="@+id/tiga"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Saya Lahir di"
-            android:layout_below="@id/satu"
-            android:fontFamily="@font/montserrat"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/empat"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_marginLeft="4dp"
-            android:text="Bandung, 19 September"
-            android:layout_below="@id/satu"
-            android:layout_toRightOf="@id/tiga"
-            android:fontFamily="@font/montserrat"
-            android:textSize="18sp" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/lima"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="2000. "
-            android:layout_below="@id/empat"
-            android:fontFamily="@font/montserrat"
-            android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorPrimary">
 
-        <TextView
-            android:id="@+id/enam"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Saya anak"
-            android:layout_below="@id/empat"
-            android:layout_toRightOf="@id/lima"
-            android:fontFamily="@font/montserrat"
-            android:textSize="18sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/firstlayer">
 
-        <TextView
-            android:id="@+id/tujuh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_marginLeft="4dp"
-            android:text="Pertama"
-            android:layout_below="@id/empat"
-            android:layout_toRightOf="@id/enam"
-            android:fontFamily="@font/montserrat"
-            android:textSize="18sp" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profilehome"
+                        android:layout_width="150dp"
+                        android:layout_height="@dimen/dimen150"
+                        android:layout_marginTop="@dimen/dimen80"
+                        android:layout_marginBottom="@dimen/dimen30"
+                        android:src="@drawable/profile"/>
 
-        <TextView
-            android:id="@+id/delapan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:text="Dari dua"
-            android:layout_below="@id/empat"
-            android:layout_toRightOf="@id/tujuh"
-            android:fontFamily="@font/montserrat"
-            android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/secondlayer">
 
-        <TextView
-            android:id="@+id/delapan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:text="bersaudara."
-            android:layout_below="@id/tujuh"
-            android:fontFamily="@font/montserrat"
-            android:textSize="18sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen40"
+                    android:layout_marginTop="@dimen/dimen20"
+                    android:layout_marginBottom="@dimen/dimen32">
 
-    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/satu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Perkenalkan Saya"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18" />
+
+                    <TextView
+                        android:id="@+id/dua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adi Chandra N."
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat"
+                        android:layout_marginLeft="@dimen/dimen4"
+                        android:textSize="@dimen/dimensp18"
+                        android:layout_toRightOf="@id/satu"/>
+
+                    <TextView
+                        android:id="@+id/tiga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saya Lahir di"
+                        android:layout_below="@id/satu"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18" />
+
+                    <TextView
+                        android:id="@+id/empat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/dimen4"
+                        android:text="Bandung, 19 September"
+                        android:layout_below="@id/satu"
+                        android:layout_toRightOf="@id/tiga"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18" />
+
+                    <TextView
+                        android:id="@+id/lima"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="2000. "
+                        android:layout_below="@id/empat"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18" />
+
+                    <TextView
+                        android:id="@+id/enam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saya anak"
+                        android:layout_below="@id/empat"
+                        android:layout_toRightOf="@id/lima"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18" />
+
+                    <TextView
+                        android:id="@+id/tujuh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/dimen4"
+                        android:text="Pertama"
+                        android:layout_below="@id/empat"
+                        android:layout_toRightOf="@id/enam"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18" />
+
+                    <TextView
+                        android:id="@+id/delapan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen4"
+                        android:text="Dari dua"
+                        android:layout_below="@id/empat"
+                        android:layout_toRightOf="@id/tujuh"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18" />
+
+                    <TextView
+                        android:id="@+id/sembilan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="bersaudara."
+                        android:layout_below="@id/tujuh"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp18" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen30"
+                android:layout_marginRight="@dimen/dimen30"
+                android:layout_marginTop="@dimen/dimen30"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/hobby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/dimen20">
+
+                    <TextView
+                        android:id="@+id/txt_hobby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp28"
+                        android:text="Hobby"
+                        android:textColor="@color/black"/>
+
+                    <soup.neumorphism.NeumorphImageButton
+                        android:id="@+id/trading"
+                        style="@style/Widget.Neumorph.FloatingActionButton"
+                        android:layout_width="@dimen/dimen80"
+                        android:layout_height="@dimen/dimen80"
+                        android:layout_below="@id/txt_hobby"
+                        android:scaleType="center"
+                        app:neumorph_shapeType="flat"
+                        android:layout_gravity="center"
+                        android:src="@drawable/chart"/>
+
+                    <soup.neumorphism.NeumorphImageButton
+                        style="@style/Widget.Neumorph.FloatingActionButton"
+                        android:layout_width="@dimen/dimen80"
+                        android:layout_height="@dimen/dimen80"
+                        android:layout_below="@id/txt_hobby"
+                        android:layout_toRightOf="@id/trading"
+                        android:scaleType="center"
+                        app:neumorph_shapeType="flat"
+                        android:layout_gravity="center"
+                        android:src="@drawable/console"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen10">
+
+                    <TextView
+                        android:id="@+id/txt_int"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp28"
+                        android:text="Interesting"
+                        android:textColor="@color/black"/>
+
+                    <soup.neumorphism.NeumorphImageButton
+                        android:id="@+id/computer"
+                        style="@style/Widget.Neumorph.FloatingActionButton"
+                        android:layout_width="@dimen/dimen80"
+                        android:layout_height="@dimen/dimen80"
+                        android:layout_below="@id/txt_int"
+                        android:scaleType="center"
+                        app:neumorph_shapeType="flat"
+                        android:layout_gravity="center"
+                        android:src="@drawable/computer"/>
+
+                    <soup.neumorphism.NeumorphImageButton
+                        style="@style/Widget.Neumorph.FloatingActionButton"
+                        android:layout_width="@dimen/dimen80"
+                        android:layout_height="@dimen/dimen80"
+                        android:layout_below="@id/txt_int"
+                        android:layout_toRightOf="@id/computer"
+                        android:scaleType="center"
+                        app:neumorph_shapeType="flat"
+                        android:layout_gravity="center"
+                        android:src="@drawable/videogame"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen30"
+                android:layout_marginRight="@dimen/dimen30"
+                android:layout_marginTop="@dimen/dimen30"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/makes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/dimen20">
+
+                    <TextView
+                        android:id="@+id/txt_makes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp28"
+                        android:text="Makes"
+                        android:textColor="@color/black"/>
+
+                    <soup.neumorphism.NeumorphImageButton
+                        android:id="@+id/sate"
+                        style="@style/Widget.Neumorph.FloatingActionButton"
+                        android:layout_width="@dimen/dimen80"
+                        android:layout_height="@dimen/dimen80"
+                        android:layout_below="@id/txt_makes"
+                        android:scaleType="center"
+                        app:neumorph_shapeType="flat"
+                        android:layout_gravity="center"
+                        android:src="@drawable/satay"/>
+
+                    <soup.neumorphism.NeumorphImageButton
+                        style="@style/Widget.Neumorph.FloatingActionButton"
+                        android:layout_width="@dimen/dimen80"
+                        android:layout_height="@dimen/dimen80"
+                        android:layout_below="@id/txt_makes"
+                        android:layout_toRightOf="@id/sate"
+                        android:scaleType="center"
+                        app:neumorph_shapeType="flat"
+                        android:layout_gravity="center"
+                        android:src="@drawable/kebab"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/mikes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen10">
+
+                    <TextView
+                        android:id="@+id/txt_mikes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp28"
+                        android:text="Mikes"
+                        android:textColor="@color/black"/>
+
+                    <soup.neumorphism.NeumorphImageButton
+                        android:id="@+id/boba"
+                        style="@style/Widget.Neumorph.FloatingActionButton"
+                        android:layout_width="@dimen/dimen80"
+                        android:layout_height="@dimen/dimen80"
+                        android:layout_below="@id/txt_mikes"
+                        android:scaleType="center"
+                        app:neumorph_shapeType="flat"
+                        android:layout_gravity="center"
+                        android:src="@drawable/bubbletea"/>
+
+                    <soup.neumorphism.NeumorphImageButton
+                        style="@style/Widget.Neumorph.FloatingActionButton"
+                        android:layout_width="@dimen/dimen80"
+                        android:layout_height="@dimen/dimen80"
+                        android:layout_below="@id/txt_mikes"
+                        android:layout_toRightOf="@id/boba"
+                        android:scaleType="center"
+                        app:neumorph_shapeType="flat"
+                        android:layout_gravity="center"
+                        android:src="@drawable/greentea"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen30"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/cita"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/dimen20">
+
+                    <TextView
+                        android:id="@+id/txt_cita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/dimensp28"
+                        android:text="Cita-Cita"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/full"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_cita"
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:layout_marginLeft="@dimen/dimen10"
+                        android:background="@drawable/chip_style"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Full Stack Developer"/>
+
+                    <TextView
+                        android:id="@+id/ui"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_cita"
+                        android:layout_toRightOf="@id/full"
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:layout_marginLeft="@dimen/dimen10"
+                        android:background="@drawable/chip_style"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat"
+                        android:text="UI/UX"/>
+
+                    <TextView
+                        android:id="@+id/pns"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_cita"
+                        android:layout_toRightOf="@id/ui"
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:layout_marginLeft="@dimen/dimen10"
+                        android:background="@drawable/chip_style"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat"
+                        android:text="PNS"/>
+
+                    <TextView
+                        android:id="@+id/txt_music"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/full"
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:layout_marginLeft="@dimen/dimen10"
+                        android:background="@drawable/chip_style"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Punya Gelar Haji"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

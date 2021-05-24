@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -80,13 +81,13 @@ public class FragmentGallery extends Fragment {
 
         final FragmentActivity fragment = getActivity();
         final RecyclerView recyclerView = view.findViewById(R.id.gall_act);
-        recyclerView.setLayoutManager(new GridLayoutManager(fragment, 2));
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         modelApp model = new modelApp();
 
         //gallery
         int[] imgGallery = {
-                R.drawable.fr5, R.drawable.fr2, R.drawable.fr3, R.drawable.fr4,
-                R.drawable.fr1
+                R.drawable.g1, R.drawable.g4, R.drawable.g3, R.drawable.g2,R.drawable.g5,R.drawable.g6,R.drawable.g9,R.drawable.g8,
+                R.drawable.g7, R.drawable.g10, R.drawable.g11
         };
         model.setImgGallery(imgGallery);
 

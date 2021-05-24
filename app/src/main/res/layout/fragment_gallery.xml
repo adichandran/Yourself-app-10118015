@@ -9,18 +9,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp">
+        android:paddingRight="@dimen/dimen20"
+        android:paddingLeft="@dimen/dimen20"
+        android:layout_marginTop="@dimen/dimen80"
+        android:layout_marginLeft="@dimen/dimen16"
+        android:layout_marginRight="@dimen/dimen16">
 
         <TextView
             android:id="@+id/gallery"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
-            android:textSize="36sp"
+            android:textSize="@dimen/dimensp36"
             android:text="Gallery"
             android:textColor="@color/black"/>
 
@@ -30,14 +30,14 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="@dimen/dimensp18"
             android:text="Kumpulan Foto-Foto Yang Disukai \nAdi chandra"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/gall_act"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp">
+            android:layout_marginTop="@dimen/dimen14">
         </androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>

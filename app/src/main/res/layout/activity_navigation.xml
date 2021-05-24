@@ -25,8 +25,8 @@
         app:menu="@menu/menu"
         app:itemBackground="@drawable/menu_item_padding"
         app:itemTextAppearance="@style/TextViewStyle"
-        app:itemHorizontalPadding="40dp"
-        app:itemIconSize="30dp">
+        app:itemHorizontalPadding="@dimen/dimen40"
+        app:itemIconSize="@dimen/dimen30">
 
     </com.google.android.material.navigation.NavigationView>
 

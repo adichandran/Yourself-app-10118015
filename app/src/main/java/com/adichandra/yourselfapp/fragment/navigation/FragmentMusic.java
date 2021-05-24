@@ -13,14 +13,21 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
 import com.adichandra.yourselfapp.R;
+import com.adichandra.yourselfapp.adapter.AdapterDailyAct;
+import com.adichandra.yourselfapp.adapter.AdapterMusicAct;
+import com.adichandra.yourselfapp.model.modelApp;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -75,12 +82,45 @@ public class FragmentMusic extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_music, container, false);
 
+        final FragmentActivity fragment = getActivity();
+        final RecyclerView recyclerView = view.findViewById(R.id.music_act);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(fragment, LinearLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(layoutManager);
+        modelApp model = new modelApp();
+
+        String musicAct[] = {
+                "Melanie Mertinez - Play Date",
+                "Miki Matsubara - Stay With Me",
+                "Linked Horizon - Shinzo Wo Sasageyo!",
+                "Klang - Falling Again",
+                "Yoon Mirae - I Will Listen Never Alone",
+                "Baechigi - Blow Away"
+        };
+
+        model.setMusicAct(musicAct);
+
+        // Menampilkan Video
         VideoView videoView = view.findViewById(R.id.video);
-        videoView.setVideoPath("android.resource://"+getActivity().getPackageName()+"/"+R.raw.sample);
+        videoView.setVideoPath("android.resource://"+getActivity().getPackageName()+"/"+R.raw.render);
         MediaController mediaController = new MediaController(getContext());
         mediaController.setAnchorView(videoView);
         videoView.setMediaController(mediaController);
 
+
+        //
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                final AdapterMusicAct adapter = new AdapterMusicAct(fragment, model.getMusicAct());
+                fragment.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        recyclerView.setAdapter(adapter);
+                    }
+
+                });
+            }
+        }).start();
         return view;
     }
 
