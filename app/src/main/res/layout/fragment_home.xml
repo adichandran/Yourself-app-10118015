@@ -180,7 +180,7 @@
                         android:scaleType="center"
                         app:neumorph_shapeType="flat"
                         android:layout_gravity="center"
-                        android:src="@drawable/chart"/>
+                        android:src="@drawable/chart" />
 
                     <soup.neumorphism.NeumorphImageButton
                         style="@style/Widget.Neumorph.FloatingActionButton"
