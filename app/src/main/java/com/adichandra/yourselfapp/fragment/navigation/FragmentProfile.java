@@ -8,6 +8,8 @@ package com.adichandra.yourselfapp.fragment.navigation;
  * Deskripsi : Membuat Tampilan FragmentProfile
  * */
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,6 +19,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.adichandra.yourselfapp.R;
+
+import soup.neumorphism.NeumorphButton;
+import soup.neumorphism.NeumorphFloatingActionButton;
+import soup.neumorphism.NeumorphImageButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -70,7 +76,62 @@ public class FragmentProfile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        final View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+        NeumorphFloatingActionButton facebook, instagram, github, whatsapp;
+        NeumorphButton maps;
+
+        facebook = view.findViewById(R.id.facebook);
+        instagram = view.findViewById(R.id.insta);
+        github = view.findViewById(R.id.github);
+        whatsapp = view.findViewById(R.id.whatsapp);
+        maps = view.findViewById(R.id.maps);
+
+        //OnClick Button instagram
+        facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://web.facebook.com/AdiChandra019/");
+            }
+        });
+
+        //OnClick Button instagram
+        instagram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://www.instagram.com/hi_adichandra/");
+            }
+        });
+
+        //OnClick Button instagram
+        github.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://github.com/adichandran");
+            }
+        });
+
+        //OnClick Button instagram
+        whatsapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://api.whatsapp.com/send/?phone=6287812600615");
+            }
+        });
+
+        //OnClick Button instagram
+        maps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://maps.google.com/maps?q=-6.978210,107.834556&t=&z=13&ie=UTF8&iwloc=&output=embed");
+            }
+        });
+        return view;
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 
     @Override
