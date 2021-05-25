@@ -4,10 +4,10 @@
     <solid android:color="@color/denim" />
 
     <padding
-        android:bottom="@dimen/chip_padding"
-        android:left="@dimen/chip_padding"
-        android:right="@dimen/chip_padding"
-        android:top="@dimen/chip_padding" />
+        android:bottom="@dimen/dimen10"
+        android:left="@dimen/dimen10"
+        android:right="@dimen/dimen10"
+        android:top="@dimen/dimen10" />
 
     <corners android:radius="30dp" />
 </shape>

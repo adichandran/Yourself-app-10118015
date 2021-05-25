@@ -8,7 +8,10 @@ package com.adichandra.yourselfapp.fragment.navigation;
  * Deskripsi : Membuat Tampilan FragmentProfile
  * */
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -18,6 +21,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+
 import com.adichandra.yourselfapp.R;
 
 import soup.neumorphism.NeumorphButton;
@@ -79,13 +86,17 @@ public class FragmentProfile extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         NeumorphFloatingActionButton facebook, instagram, github, whatsapp;
-        NeumorphButton maps;
+        NeumorphButton maps,about;
+        Dialog dialog;
+
+        dialog = new Dialog(getActivity());
 
         facebook = view.findViewById(R.id.facebook);
         instagram = view.findViewById(R.id.insta);
         github = view.findViewById(R.id.github);
         whatsapp = view.findViewById(R.id.whatsapp);
         maps = view.findViewById(R.id.maps);
+        about = view.findViewById(R.id.about);
 
         //OnClick Button instagram
         facebook.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +135,26 @@ public class FragmentProfile extends Fragment {
             @Override
             public void onClick(View v) {
                 gotoUrl("https://maps.google.com/maps?q=-6.978210,107.834556&t=&z=13&ie=UTF8&iwloc=&output=embed");
+            }
+        });
+
+        //OnClick Button instagram
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.setContentView(R.layout.dialog_about);
+                ImageView close = dialog.findViewById(R.id.cross);
+
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+
+                close.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
             }
         });
         return view;

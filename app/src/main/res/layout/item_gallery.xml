@@ -3,19 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="4dp">
+    android:layout_margin="@dimen/dimen4">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="12dp">
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/dimen14">
 
         <ImageView
             android:id="@+id/img_gallery"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            android:background="@drawable/gallery_radius"
             android:adjustViewBounds="true"
             android:src="@mipmap/ic_launcher"/>
 
