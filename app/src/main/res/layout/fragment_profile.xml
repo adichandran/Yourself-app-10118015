@@ -9,7 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,10 +81,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:layout_marginLeft="@dimen/dimen4"
+                    android:layout_marginStart="@dimen/dimen4"
                     android:text="Bandung, 19 September"
                     android:layout_below="@id/satu"
-                    android:layout_toRightOf="@id/tiga"
+                    android:layout_toEndOf="@id/tiga"
                     android:fontFamily="@font/montserrat"
                     android:textSize="@dimen/dimensp18" />
 
@@ -103,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:text="Saya anak"
                     android:layout_below="@id/empat"
-                    android:layout_toRightOf="@id/lima"
+                    android:layout_toEndOf="@id/lima"
                     android:fontFamily="@font/montserrat"
                     android:textSize="@dimen/dimensp18" />
 
@@ -112,10 +113,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:layout_marginLeft="@dimen/dimen4"
+                    android:layout_marginStart="@dimen/dimen4"
                     android:text="Pertama"
                     android:layout_below="@id/empat"
-                    android:layout_toRightOf="@id/enam"
+                    android:layout_toEndOf="@id/enam"
                     android:fontFamily="@font/montserrat"
                     android:textSize="@dimen/dimensp18" />
 
@@ -123,10 +124,10 @@
                     android:id="@+id/delapan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dimen4"
+                    android:layout_marginStart="@dimen/dimen4"
                     android:text="Dari dua"
                     android:layout_below="@id/empat"
-                    android:layout_toRightOf="@id/tujuh"
+                    android:layout_toEndOf="@id/tujuh"
                     android:fontFamily="@font/montserrat"
                     android:textSize="@dimen/dimensp18" />
 
@@ -150,8 +151,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="@dimen/dimen30"
-            android:layout_marginLeft="@dimen/dimen40"
-            android:layout_marginRight="@dimen/dimen40">
+            android:layout_marginStart="@dimen/dimen40"
+            android:layout_marginEnd="@dimen/dimen20">
 
             <TextView
                 android:id="@+id/txt_social"
@@ -163,48 +164,48 @@
                 android:text="Social Media"
                 android:textColor="@color/black"/>
 
-            <soup.neumorphism.NeumorphFloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/facebook"
-                style="@style/Widget.Neumorph.FloatingActionButton"
-                android:layout_width="@dimen/dimen80"
-                android:layout_height="@dimen/dimen80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/txt_social"
-                android:scaleType="center"
-                app:neumorph_shapeType="flat"
-                android:src="@drawable/facebook" />
+                android:backgroundTint="@color/white"
+                android:layout_margin="@dimen/dimen16"
+                android:src="@drawable/facebook"
+                tools:ignore="ContentDescription" />
 
-            <soup.neumorphism.NeumorphFloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/insta"
-                style="@style/Widget.Neumorph.FloatingActionButton"
-                android:layout_width="@dimen/dimen80"
-                android:layout_height="@dimen/dimen80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/txt_social"
-                android:layout_toRightOf="@id/facebook"
-                android:scaleType="center"
-                app:neumorph_shapeType="flat"
-                android:src="@drawable/instagram" />
+                android:layout_toEndOf="@id/facebook"
+                android:layout_margin="@dimen/dimen16"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/instagram"
+                tools:ignore="ContentDescription" />
 
-            <soup.neumorphism.NeumorphFloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/github"
-                style="@style/Widget.Neumorph.FloatingActionButton"
-                android:layout_width="@dimen/dimen80"
-                android:layout_height="@dimen/dimen80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/txt_social"
-                android:layout_toRightOf="@id/insta"
-                android:scaleType="center"
-                app:neumorph_shapeType="flat"
-                android:src="@drawable/github" />
+                android:layout_toEndOf="@id/insta"
+                android:layout_margin="@dimen/dimen16"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/github"
+                tools:ignore="ContentDescription" />
 
-            <soup.neumorphism.NeumorphFloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/whatsapp"
-                style="@style/Widget.Neumorph.FloatingActionButton"
-                android:layout_width="@dimen/dimen80"
-                android:layout_height="@dimen/dimen80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@id/txt_social"
-                android:layout_toRightOf="@id/github"
-                android:scaleType="center"
-                app:neumorph_shapeType="flat"
-                android:src="@drawable/whatsapp" />
+                android:layout_toEndOf="@id/github"
+                android:layout_margin="@dimen/dimen16"
+                android:backgroundTint="@color/white"
+                android:src="@drawable/whatsapp"
+                tools:ignore="ContentDescription" />
 
             <soup.neumorphism.NeumorphButton
                 android:id="@+id/maps"

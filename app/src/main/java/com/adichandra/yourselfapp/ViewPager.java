@@ -5,7 +5,7 @@ package com.adichandra.yourselfapp;
  * NAMA  : Adi Chandra Nugraha
  * KELAS : IF1
  * TGL   : 12/05/2021
- * Deskripsi : Membuat Tampilan ViewPager dengan # Fragment
+ * Deskripsi : Membuat Tampilan ViewPager dengan 3 Fragment
  * */
 
 import androidx.annotation.NonNull;

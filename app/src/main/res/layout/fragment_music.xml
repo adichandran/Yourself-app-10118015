@@ -14,7 +14,8 @@
         android:layout_marginRight="@dimen/dimen16"
         android:orientation="vertical"
         android:paddingLeft="@dimen/dimen20"
-        android:paddingRight="@dimen/dimen20">
+        android:paddingRight="@dimen/dimen20"
+        tools:ignore="UselessParent">
 
         <RelativeLayout
             android:id="@+id/rel_music"

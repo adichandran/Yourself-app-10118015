@@ -8,7 +8,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,7 +48,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dimen40"
+                    android:layout_marginStart="@dimen/dimen40"
                     android:layout_marginTop="@dimen/dimen20"
                     android:layout_marginBottom="@dimen/dimen32">
 
@@ -66,7 +67,7 @@
                         android:text="Adi Chandra N."
                         android:textStyle="bold"
                         android:fontFamily="@font/montserrat"
-                        android:layout_marginLeft="@dimen/dimen4"
+                        android:layout_marginStart="@dimen/dimen4"
                         android:textSize="@dimen/dimensp18"
                         android:layout_toRightOf="@id/satu"/>
 
@@ -87,7 +88,7 @@
                         android:layout_marginStart="@dimen/dimen4"
                         android:text="Bandung, 19 September"
                         android:layout_below="@id/satu"
-                        android:layout_toRightOf="@id/tiga"
+                        android:layout_toEndOf="@id/tiga"
                         android:fontFamily="@font/montserrat"
                         android:textSize="@dimen/dimensp18" />
 
@@ -107,7 +108,7 @@
                         android:layout_height="wrap_content"
                         android:text="Saya anak"
                         android:layout_below="@id/empat"
-                        android:layout_toRightOf="@id/lima"
+                        android:layout_toEndOf="@id/lima"
                         android:fontFamily="@font/montserrat"
                         android:textSize="@dimen/dimensp18" />
 
@@ -116,10 +117,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:layout_marginLeft="@dimen/dimen4"
+                        android:layout_marginStart="@dimen/dimen4"
                         android:text="Pertama"
                         android:layout_below="@id/empat"
-                        android:layout_toRightOf="@id/enam"
+                        android:layout_toEndOf="@id/enam"
                         android:fontFamily="@font/montserrat"
                         android:textSize="@dimen/dimensp18" />
 
@@ -127,10 +128,10 @@
                         android:id="@+id/delapan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dimen4"
+                        android:layout_marginStart="@dimen/dimen4"
                         android:text="Dari dua"
                         android:layout_below="@id/empat"
-                        android:layout_toRightOf="@id/tujuh"
+                        android:layout_toEndOf="@id/tujuh"
                         android:fontFamily="@font/montserrat"
                         android:textSize="@dimen/dimensp18" />
 
@@ -151,16 +152,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dimen30"
-                android:layout_marginRight="@dimen/dimen30"
+                android:layout_marginStart="@dimen/dimen30"
+                android:layout_marginEnd="@dimen/dimen20"
                 android:layout_marginTop="@dimen/dimen30"
                 android:orientation="horizontal">
 
                 <RelativeLayout
                     android:id="@+id/hobby"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="@dimen/dimen20">
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/txt_hobby"
@@ -171,34 +171,33 @@
                         android:text="Hobby"
                         android:textColor="@color/black"/>
 
-                    <soup.neumorphism.NeumorphFloatingActionButton
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/trading"
-                        style="@style/Widget.Neumorph.FloatingActionButton"
-                        android:layout_width="@dimen/dimen80"
-                        android:layout_height="@dimen/dimen80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/txt_hobby"
-                        android:scaleType="center"
-                        app:neumorph_shapeType="flat"
+                        android:layout_margin="16dp"
+                        android:backgroundTint="@color/white"
                         android:layout_gravity="center"
-                        android:src="@drawable/chart" />
+                        android:src="@drawable/chart"
+                        tools:ignore="ContentDescription" />
 
-                    <soup.neumorphism.NeumorphImageButton
-                        style="@style/Widget.Neumorph.FloatingActionButton"
-                        android:layout_width="@dimen/dimen80"
-                        android:layout_height="@dimen/dimen80"
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/txt_hobby"
-                        android:layout_toRightOf="@id/trading"
-                        android:scaleType="center"
-                        app:neumorph_shapeType="flat"
+                        android:layout_margin="16dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_toEndOf="@id/trading"
                         android:layout_gravity="center"
-                        android:src="@drawable/console"/>
+                        android:src="@drawable/console"
+                        tools:ignore="ContentDescription" />
 
                 </RelativeLayout>
                 <RelativeLayout
                     android:id="@+id/interest"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dimen10">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/txt_int"
@@ -209,27 +208,29 @@
                         android:text="Interesting"
                         android:textColor="@color/black"/>
 
-                    <soup.neumorphism.NeumorphImageButton
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/computer"
-                        style="@style/Widget.Neumorph.FloatingActionButton"
-                        android:layout_width="@dimen/dimen80"
-                        android:layout_height="@dimen/dimen80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/txt_int"
-                        android:scaleType="center"
-                        app:neumorph_shapeType="flat"
+                        android:layout_margin="16dp"
+                        android:backgroundTint="@color/white"
                         android:layout_gravity="center"
-                        android:src="@drawable/computer"/>
+                        android:src="@drawable/computer"
+                        tools:ignore="ContentDescription" />
 
-                    <soup.neumorphism.NeumorphImageButton
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
                         style="@style/Widget.Neumorph.FloatingActionButton"
-                        android:layout_width="@dimen/dimen80"
-                        android:layout_height="@dimen/dimen80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/txt_int"
                         android:layout_toRightOf="@id/computer"
-                        android:scaleType="center"
-                        app:neumorph_shapeType="flat"
+                        android:layout_marginTop="@dimen/dimen16"
+                        android:layout_marginLeft="@dimen/dimen16"
+                        android:backgroundTint="@color/white"
                         android:layout_gravity="center"
-                        android:src="@drawable/videogame"/>
+                        android:src="@drawable/videogame"
+                        tools:ignore="ContentDescription" />
 
                 </RelativeLayout>
 
@@ -239,16 +240,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dimen30"
-                android:layout_marginRight="@dimen/dimen30"
+                android:layout_marginStart="@dimen/dimen30"
+                android:layout_marginEnd="@dimen/dimen20"
                 android:layout_marginTop="@dimen/dimen30"
                 android:orientation="horizontal">
 
                 <RelativeLayout
                     android:id="@+id/makes"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="@dimen/dimen20">
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/txt_makes"
@@ -259,34 +259,33 @@
                         android:text="Makes"
                         android:textColor="@color/black"/>
 
-                    <soup.neumorphism.NeumorphImageButton
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/sate"
-                        style="@style/Widget.Neumorph.FloatingActionButton"
-                        android:layout_width="@dimen/dimen80"
-                        android:layout_height="@dimen/dimen80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/txt_makes"
-                        android:scaleType="center"
-                        app:neumorph_shapeType="flat"
+                        android:layout_margin="16dp"
+                        android:backgroundTint="@color/white"
                         android:layout_gravity="center"
-                        android:src="@drawable/satay"/>
+                        android:src="@drawable/satay"
+                        tools:ignore="ContentDescription" />
 
-                    <soup.neumorphism.NeumorphImageButton
-                        style="@style/Widget.Neumorph.FloatingActionButton"
-                        android:layout_width="@dimen/dimen80"
-                        android:layout_height="@dimen/dimen80"
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/txt_makes"
                         android:layout_toRightOf="@id/sate"
-                        android:scaleType="center"
-                        app:neumorph_shapeType="flat"
+                        android:layout_margin="16dp"
+                        android:backgroundTint="@color/white"
                         android:layout_gravity="center"
-                        android:src="@drawable/kebab"/>
+                        android:src="@drawable/kebab"
+                        tools:ignore="ContentDescription" />
 
                 </RelativeLayout>
                 <RelativeLayout
                     android:id="@+id/mikes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dimen10">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/txt_mikes"
@@ -297,27 +296,32 @@
                         android:text="Mikes"
                         android:textColor="@color/black"/>
 
-                    <soup.neumorphism.NeumorphImageButton
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/boba"
-                        style="@style/Widget.Neumorph.FloatingActionButton"
-                        android:layout_width="@dimen/dimen80"
-                        android:layout_height="@dimen/dimen80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/txt_mikes"
+                        android:layout_margin="16dp"
+                        android:backgroundTint="@color/white"
                         android:scaleType="center"
                         app:neumorph_shapeType="flat"
                         android:layout_gravity="center"
-                        android:src="@drawable/bubbletea"/>
+                        android:src="@drawable/bubbletea"
+                        tools:ignore="ContentDescription" />
 
-                    <soup.neumorphism.NeumorphImageButton
-                        style="@style/Widget.Neumorph.FloatingActionButton"
-                        android:layout_width="@dimen/dimen80"
-                        android:layout_height="@dimen/dimen80"
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@id/txt_mikes"
-                        android:layout_toRightOf="@id/boba"
+                        android:layout_toEndOf="@id/boba"
+                        android:layout_marginTop="@dimen/dimen16"
+                        android:layout_marginStart="@dimen/dimen16"
+                        android:backgroundTint="@color/white"
                         android:scaleType="center"
                         app:neumorph_shapeType="flat"
                         android:layout_gravity="center"
-                        android:src="@drawable/greentea"/>
+                        android:src="@drawable/greentea"
+                        tools:ignore="ContentDescription" />
 
                 </RelativeLayout>
 
@@ -334,7 +338,7 @@
                     android:id="@+id/cita"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="@dimen/dimen20">
+                    android:paddingEnd="@dimen/dimen20">
 
                     <TextView
                         android:id="@+id/txt_cita"
@@ -351,7 +355,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt_cita"
                         android:layout_marginTop="@dimen/dimen10"
-                        android:layout_marginLeft="@dimen/dimen10"
+                        android:layout_marginStart="@dimen/dimen10"
                         android:background="@drawable/chip_style"
                         android:textColor="@color/white"
                         android:textStyle="bold"
@@ -363,9 +367,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt_cita"
-                        android:layout_toRightOf="@id/full"
+                        android:layout_toEndOf="@id/full"
                         android:layout_marginTop="@dimen/dimen10"
-                        android:layout_marginLeft="@dimen/dimen10"
+                        android:layout_marginStart="@dimen/dimen10"
                         android:background="@drawable/chip_style"
                         android:textColor="@color/white"
                         android:textStyle="bold"
@@ -377,9 +381,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt_cita"
-                        android:layout_toRightOf="@id/ui"
+                        android:layout_toEndOf="@id/ui"
                         android:layout_marginTop="@dimen/dimen10"
-                        android:layout_marginLeft="@dimen/dimen10"
+                        android:layout_marginStart="@dimen/dimen10"
                         android:background="@drawable/chip_style"
                         android:textColor="@color/white"
                         android:textStyle="bold"
@@ -387,17 +391,31 @@
                         android:text="PNS"/>
 
                     <TextView
-                        android:id="@+id/txt_music"
+                        android:id="@+id/haji"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/full"
                         android:layout_marginTop="@dimen/dimen10"
-                        android:layout_marginLeft="@dimen/dimen10"
+                        android:layout_marginStart="@dimen/dimen10"
                         android:background="@drawable/chip_style"
                         android:textColor="@color/white"
                         android:textStyle="bold"
                         android:fontFamily="@font/montserrat"
                         android:text="Punya Gelar Haji"/>
+
+                    <TextView
+                        android:id="@+id/mobile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/full"
+                        android:layout_toRightOf="@id/haji"
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:layout_marginStart="@dimen/dimen10"
+                        android:background="@drawable/chip_style"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Mobile Developer"/>
 
                 </RelativeLayout>
 

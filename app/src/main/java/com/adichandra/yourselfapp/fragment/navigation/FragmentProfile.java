@@ -26,6 +26,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.adichandra.yourselfapp.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphFloatingActionButton;
@@ -85,7 +86,7 @@ public class FragmentProfile extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-        NeumorphFloatingActionButton facebook, instagram, github, whatsapp;
+        FloatingActionButton facebook, instagram, github, whatsapp;
         NeumorphButton maps,about;
         Dialog dialog;
 

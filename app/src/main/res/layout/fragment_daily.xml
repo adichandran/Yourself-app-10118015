@@ -14,7 +14,8 @@
         android:paddingLeft="@dimen/dimen20"
         android:layout_marginTop="@dimen/dimen80"
         android:layout_marginLeft="@dimen/dimen16"
-        android:layout_marginRight="@dimen/dimen16">
+        android:layout_marginRight="@dimen/dimen16"
+        tools:ignore="UselessParent">
 
         <RelativeLayout
             android:id="@+id/rel_daily"
