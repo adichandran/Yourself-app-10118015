@@ -5,7 +5,7 @@ package com.adichandra.yourselfapp;
  * NAMA  : Adi Chandra Nugraha
  * KELAS : IF1
  * TGL   : 12/05/2021
- * Deskripsi : Membuat Tampilan MainActivity menjadi Splash Layout
+ * Deskripsi : Menampilkan halaman activity_main(SplashScreen) dengan waktu 3000
  * */
 
 import androidx.appcompat.app.AppCompatActivity;
