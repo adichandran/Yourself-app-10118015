@@ -159,8 +159,10 @@
 
                 <RelativeLayout
                     android:id="@+id/hobby"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
 
                     <TextView
                         android:id="@+id/txt_hobby"
@@ -176,7 +178,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt_hobby"
-                        android:layout_margin="16dp"
+                        android:layout_marginTop="@dimen/dimen16"
+                        android:layout_marginEnd="@dimen/dimen16"
+                        android:layout_marginBottom="@dimen/dimen16"
                         android:backgroundTint="@color/white"
                         android:layout_gravity="center"
                         android:src="@drawable/chart"
@@ -186,7 +190,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt_hobby"
-                        android:layout_margin="16dp"
+                        android:layout_marginTop="@dimen/dimen16"
+                        android:layout_marginBottom="@dimen/dimen16"
                         android:backgroundTint="@color/white"
                         android:layout_toEndOf="@id/trading"
                         android:layout_gravity="center"
@@ -197,7 +202,8 @@
                 <RelativeLayout
                     android:id="@+id/interest"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
                     <TextView
                         android:id="@+id/txt_int"
@@ -213,7 +219,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt_int"
-                        android:layout_margin="16dp"
+                        android:layout_marginTop="@dimen/dimen16"
+                        android:layout_marginEnd="@dimen/dimen16"
+                        android:layout_marginBottom="@dimen/dimen16"
                         android:backgroundTint="@color/white"
                         android:layout_gravity="center"
                         android:src="@drawable/computer"
@@ -226,7 +234,7 @@
                         android:layout_below="@id/txt_int"
                         android:layout_toRightOf="@id/computer"
                         android:layout_marginTop="@dimen/dimen16"
-                        android:layout_marginLeft="@dimen/dimen16"
+                        android:layout_marginBottom="@dimen/dimen16"
                         android:backgroundTint="@color/white"
                         android:layout_gravity="center"
                         android:src="@drawable/videogame"
@@ -247,8 +255,9 @@
 
                 <RelativeLayout
                     android:id="@+id/makes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
                     <TextView
                         android:id="@+id/txt_makes"
@@ -264,7 +273,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt_makes"
-                        android:layout_margin="16dp"
+                        android:layout_marginTop="@dimen/dimen16"
+                        android:layout_marginEnd="@dimen/dimen16"
+                        android:layout_marginBottom="@dimen/dimen16"
                         android:backgroundTint="@color/white"
                         android:layout_gravity="center"
                         android:src="@drawable/satay"
@@ -275,7 +286,8 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt_makes"
                         android:layout_toRightOf="@id/sate"
-                        android:layout_margin="16dp"
+                        android:layout_marginTop="@dimen/dimen16"
+                        android:layout_marginBottom="@dimen/dimen16"
                         android:backgroundTint="@color/white"
                         android:layout_gravity="center"
                         android:src="@drawable/kebab"
@@ -285,7 +297,8 @@
                 <RelativeLayout
                     android:id="@+id/mikes"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
                     <TextView
                         android:id="@+id/txt_mikes"
@@ -301,7 +314,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/txt_mikes"
-                        android:layout_margin="16dp"
+                        android:layout_marginTop="@dimen/dimen16"
+                        android:layout_marginEnd="@dimen/dimen16"
+                        android:layout_marginBottom="@dimen/dimen16"
                         android:backgroundTint="@color/white"
                         android:scaleType="center"
                         app:neumorph_shapeType="flat"
@@ -315,7 +330,7 @@
                         android:layout_below="@id/txt_mikes"
                         android:layout_toEndOf="@id/boba"
                         android:layout_marginTop="@dimen/dimen16"
-                        android:layout_marginStart="@dimen/dimen16"
+                        android:layout_marginBottom="@dimen/dimen16"
                         android:backgroundTint="@color/white"
                         android:scaleType="center"
                         app:neumorph_shapeType="flat"

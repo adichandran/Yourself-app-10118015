@@ -147,4 +147,5 @@ public class FragmentDaily extends Fragment {
         getActivity().setTitle("Daily Activity");
     }
 
+
 }

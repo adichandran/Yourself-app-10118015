@@ -105,11 +105,10 @@ public class NavigationActivity extends AppCompatActivity {
     public void onBackPressed() {
         int count = getSupportFragmentManager().getBackStackEntryCount();
 
-        if (count == 0) {
+        if (count != 0) {
             super.onBackPressed();
         } else {
             getSupportFragmentManager().popBackStack();
-            finish();
         }
     }
 }

@@ -38,13 +38,17 @@ public class WalkthroughActivity extends AppCompatActivity {
 
         preferences = getSharedPreferences("myPref",MODE_PRIVATE);
 
+        getPrefData();
+        savePrefData();
+    }
+
+    public void getPrefData() {
         if (preferences.getBoolean(FIRST_USER,false)){
             Intent intent = new Intent(WalkthroughActivity.this,NavigationActivity.class);
             startActivity(intent);
         }
-
-        savePrefData();
     }
+
 
     private void savePrefData() {
         preferences.edit().putBoolean(FIRST_USER, true).apply();
@@ -54,11 +58,13 @@ public class WalkthroughActivity extends AppCompatActivity {
         savePrefData();
         Intent intent = new Intent(WalkthroughActivity.this,NavigationActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public void btnSkip(View view) {
         savePrefData();
         Intent intent = new Intent(WalkthroughActivity.this,NavigationActivity.class);
         startActivity(intent);
+        finish();
     }
 }
