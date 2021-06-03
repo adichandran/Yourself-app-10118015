@@ -10,7 +10,7 @@ Aplikasi ini merupakan aplikasi pengenalan diri seorang Adi Chandra Nugraha, dim
 
 1. Splash Screen
 2. Walkthrough tentang aplikasi 3 page (ViewPager)
-3. Menu (Navigation Drawer/BottomNavigation)
+3. Menu (Navigation Drawer)
   - Home
     - Profile (Foto Diri, Deskrpsi tentang diri)
     - Interest (Hobby, Makes, Mikes, Interest, Cita-cita)
